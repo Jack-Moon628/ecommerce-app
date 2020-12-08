@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  margin: 0 7.5 15px;
+  margin: 0 7.5px 15px;
   overflow: hidden;
 
   &:hover {
@@ -23,7 +23,7 @@
   }
 
   &.large {
-    height: 360px;
+    height: 380px;
   }
   &:first-child {
     margin-right: 7.5px;
@@ -63,3 +63,5 @@
     }
   }
 }
+
+
