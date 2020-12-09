@@ -17,6 +17,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path = '/' component = {HomePage} />
+        <Route exact path = '/ecommerce-app' component = {HomePage} />
         <Route path = '/shop' component = {ShopPage} />
       </Switch>
     </div>
