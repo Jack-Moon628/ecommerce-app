@@ -5,8 +5,10 @@ import './header.styles.scss';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import { auth } from '../../firebase/firebase.utils';
+import CartIcon from "../cart-icon/cart-icon.component";
+import CardDropdown from '../cart-dropdown/cart-dropdown.component';
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
@@ -26,12 +28,16 @@ const Header = ({ currentUser }) => (
         SIGN IN
         </Link>
       }
+      <CartIcon />
     </div>
+    { hidden ? null : <CardDropdown /> }
+    
   </div>
 );
 
-const mapStateToProps = state => ({   ///store - top level route reducer.
-  currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({   ///store - top level route reducer.
+  currentUser,
+  hidden
 })
 
 
