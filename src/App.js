@@ -15,21 +15,8 @@ import { setCurrentUser } from './redux/user/user.actions'
 
 import './App.css';
 
-
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE </h1>
-  </div>
-)
-
 class App extends React.Component {
-  // constructor() {    //we using redux, so don't need it anymore.
-  //   super();
 
-  //   this.state = {
-  //     currentUser: null
-  //   }
-  // }
 
   unsubscribeFromAuth = null
 
@@ -61,11 +48,7 @@ class App extends React.Component {
       setCurrentUser(userAuth);
     });
   }
-
-  componentWillUnmount() {
-    this.unSubscribeFromAuth();
-  }
-
+  
   render() {
     return (
       <div>
